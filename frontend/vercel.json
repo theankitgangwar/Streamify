@@ -9,6 +9,11 @@
   ],
   "routes": [
     {
+      "src": "/(.*)\\.(js|css|svg|png|jpg|jpeg|gif|ico|map|json|txt)$",
+      "headers": { "cache-control": "public, max-age=31536000, immutable" },
+      "continue": true
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
